@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фото Цомог - Лаб 7 Sass/SCSS</title>
+  <!-- SCSS-ээс compile хийж үүсгэсэн шахсан CSS файл -->
+  <link rel="stylesheet" href="./src/css/style.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="#" class="navbar__brand">📸 Миний Фото Цомог</a>
+      <button class="navbar__toggle-btn" id="themeToggle">🌙 Dark Mode</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="m-4">
+    
+    <!-- 3 Баганатай Card Grid -->
+    <div class="gallery-grid">
+      
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Зураг 1" class="card__image">
+        <div class="card__body">
+          <h3 class="card__title">Байгалийн үзэсгэлэн</h3>
+          <p class="card__text">Далайн эрэг дээрх наран жаргах мөч болон тайван орчныг харуулсан кадр.</p>
+          <button class="card__btn">Дэлгэрэнгүй үзэх</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80" alt="Зураг 2" class="card__image">
+        <div class="card__body">
+          <h3 class="card__title">Уул нуруудын аялал</h3>
+          <p class="card__text">Өндөр уулсын оргил өөд тэмүүлсэн сонирхолтой аяллын дурсамж.</p>
+          <button class="card__btn">Дэлгэрэнгүй үзэх</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" alt="Зураг 3" class="card__image">
+        <div class="card__body">
+          <h3 class="card__title">Шөнийн тэнгэр</h3>
+          <p class="card__text">Оддын гэрэл болон хотын шөнийн гэрэлтүүлэг хосолсон гайхалтай үзэмж.</p>
+          <button class="card__btn">Дэлгэрэнгүй үзэх</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2 class="form-section__title">Зураг нэмэх / Санал хүсэлт</h2>
+      <form id="labForm">
+        <div class="form-section__group">
+          <label for="name" class="form-section__label">Таны нэр</label>
+          <input type="text" id="name" class="form-section__input" required>
+          <div class="form-section__error" id="nameError">Нэрээ оруулна уу.</div>
+        </div>
+        
+        <div class="form-section__group">
+          <label for="email" class="form-section__label">И-мэйл хаяг</label>
+          <input type="email" id="email" class="form-section__input" required>
+          <div class="form-section__error" id="emailError">Зөв и-мэйл хаяг оруулна уу.</div>
+        </div>
+        
+        <button type="submit" class="card__btn">Мэдээлэл илгээх</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script>
+    // Энгийн validation болон theme солих жишээ скрипт
+    const form = document.getElementById('labForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Мэдээлэл амжилттай илгээгдлээ!');
+      form.reset();
+    });
+  </script>
+</body>
+</html>

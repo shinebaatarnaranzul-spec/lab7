@@ -1,0 +1,12 @@
+{
+  "name": "lab7-scss-project",
+  "version": "1.0.0",
+  "description": "Lab 7 Sass SCSS Refactoring",
+  "scripts": {
+    "sass:watch": "sass --watch src/scss/main.scss src/css/style.css",
+    "sass:build": "sass --style compressed src/scss/main.scss src/css/style.min.css"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}

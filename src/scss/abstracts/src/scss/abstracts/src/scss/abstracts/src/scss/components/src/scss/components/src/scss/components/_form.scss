@@ -1,0 +1,48 @@
+@import "../abstracts/mixins";
+
+.form-section {
+  max-width: rem(500px);
+  margin: rem(40px) auto;
+  padding: rem(24px);
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-gray-border);
+  border-radius: var(--radius-lg);
+
+  &__title {
+    font-size: rem(20px);
+    font-weight: bold;
+    margin-bottom: rem(16px);
+  }
+
+  &__group {
+    margin-bottom: rem(16px);
+  }
+
+  &__label {
+    display: block;
+    font-size: rem(14px);
+    font-weight: 500;
+    margin-bottom: rem(6px);
+  }
+
+  &__input {
+    width: 100%;
+    padding: rem(8px) rem(12px);
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-sm);
+    font-size: rem(14px);
+    outline: none;
+
+    &:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    }
+  }
+
+  &__error {
+    color: #ef4444;
+    font-size: rem(12px);
+    margin-top: rem(4px);
+    display: none;
+  }
+}

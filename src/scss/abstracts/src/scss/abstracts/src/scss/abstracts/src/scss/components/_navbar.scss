@@ -1,0 +1,33 @@
+@import "../abstracts/mixins";
+
+.navbar {
+  border-bottom: 1px solid var(--color-gray-border);
+  background-color: var(--color-bg-light);
+  padding: rem(12px) 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 rem(16px);
+    @include flex-center(row, space-between, center);
+  }
+
+  &__brand {
+    font-size: rem(18px);
+    font-weight: 700;
+    color: var(--color-text-light);
+    text-decoration: none;
+  }
+
+  &__toggle-btn {
+    padding: rem(6px) rem(12px);
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    cursor: pointer;
+    font-size: rem(14px);
+  }
+}

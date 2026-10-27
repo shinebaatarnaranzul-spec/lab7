@@ -1,0 +1,15 @@
+$spacings: (
+  0: 0,
+  1: rem(4px),
+  2: rem(8px),
+  3: rem(16px),
+  4: rem(24px),
+  5: rem(32px)
+);
+
+@each $key, $val in $spacings {
+  .m-#{$key} { margin: $val; }
+  .mt-#{$key} { margin-top: $val; }
+  .mb-#{$key} { margin-bottom: $val; }
+  .p-#{$key} { padding: $val; }
+}
